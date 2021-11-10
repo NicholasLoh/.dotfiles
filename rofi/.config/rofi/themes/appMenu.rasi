@@ -1,0 +1,54 @@
+@import "~/.config/rofi/themes/colors/nord.rasi"
+
+* {
+  background-color: @background;
+  border-color: @border;
+  text-color: @foreground;
+  spacing: 0;
+  width: 50%;
+  height: 50%;
+  border-radius: 5px;
+}
+
+inputbar {
+  border: 0 0 1px 0;
+  children: [prompt,entry];
+}
+
+prompt {
+  padding: 16px;
+  border: 0 1px 0 0;
+  enabled: false;
+}
+
+textbox {
+  background-color: @background;
+  border: 0 0 1px 0;
+  border-color: @border;
+  padding: 8px 16px;
+}
+
+entry {
+  padding: 16px;
+}
+
+listview {
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+}
+
+element {
+  border: 0 0 1px 0;
+  padding: 16px;
+}
+
+element selected {
+  background-color: @background-alt;
+  text-color: @forground;
+}
+
+element-icon {
+  size: 50;
+  margin: 0 15px 0 0;
+}

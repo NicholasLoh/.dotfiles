@@ -1,0 +1,12 @@
+require("plugins.autopairs")
+require("plugins.cmp")
+require("plugins.gitsigns")
+require("plugins.lsp")
+require("plugins.lspsaga")
+require("plugins.lspSignature")
+require("plugins.tabnine")
+require("plugins.lualine")
+require("plugins.nvim-tree")
+require("plugins.telescope")
+require("plugins.treesitter")
+

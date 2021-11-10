@@ -1,0 +1,14 @@
+@import "~/.config/rofi/themes/colors/onedark"
+
+* {
+    font:                   "DejaVuSansMono Nerd Font 12";
+    background-color:       @background;
+    text-color:             @foreground;
+}
+
+window {
+    width:                  16%;
+    padding:                10px;
+    border:		    3px;
+    border-color:           @border;
+}
