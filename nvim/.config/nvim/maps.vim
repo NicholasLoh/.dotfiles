@@ -48,6 +48,12 @@ vnoremap <C-c> "+y
 " copy all to clipboard
 nnoremap <leader>Y gg"+yG
 
+" remap split screen navigation
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
 " Goto buffer in position...
 nnoremap <silent>    <Leader>h :BufferPrevious<CR>
 nnoremap <silent>    <Leader>l :BufferNext<CR>

@@ -11,16 +11,23 @@ require'nvim-treesitter.configs'.setup {
     disable = {},
   },
   ensure_installed = {
-    "tsx",
-    "toml",
+    "bash",
+    "c",
+    "cpp",
+    "css",
+    "dockerfile",
     "fish",
-    "php",
-    "json",
-    "yaml",
-    "swift",
+    "go",
+    "graphql",
     "html",
+    "json",
+    "javascript",
+    "python"
     "scss",
-    "go"
+    "tsx",
+    "typescript",
+    "toml",
+    "yaml",
   },
 }
 
