@@ -22,12 +22,12 @@ require'nvim-treesitter.configs'.setup {
     "html",
     "json",
     "javascript",
-    "python"
+    "python",
     "scss",
     "tsx",
     "typescript",
     "toml",
-    "yaml",
+    "yaml"
   },
 }
 
