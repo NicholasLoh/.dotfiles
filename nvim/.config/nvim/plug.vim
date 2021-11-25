@@ -44,6 +44,8 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 Plug 'fatih/vim-go'
 
+Plug 'dart-lang/dart-vim-plugin'
+
 Plug 'kdheepak/lazygit.nvim'
 
 Plug 'lewis6991/gitsigns.nvim'

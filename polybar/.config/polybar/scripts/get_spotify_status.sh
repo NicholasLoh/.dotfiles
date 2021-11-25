@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # The name of polybar bar which houses the main spotify module and the control modules.
-PARENT_BAR="bar"
-PARENT_BAR_PID=$(pgrep -a "polybar" | grep "$PARENT_BAR" | cut -d" " -f1)
+PARENT_BAR="mainbar-i3"
 
 # Set the source audio player here.
 # Players supporting the MPRIS spec are supported.
@@ -15,14 +14,6 @@ PLAYER="spotify"
 # Eg. {{ artist }} - {{ album }} - {{ title }}
 # See more attributes here: https://github.com/altdesktop/playerctl/#printing-properties-and-metadata
 FORMAT="{{ title }} - {{ artist }}"
-
-# Sends $2 as message to all polybar PIDs that are part of $1
-update_hooks() {
-    while IFS= read -r id
-    do
-        polybar-msg -p "$id" hook spotify-play-pause $2 1>/dev/null 2>&1
-    done < <(echo "$1")
-}
 
 PLAYERCTL_STATUS=$(playerctl --player=$PLAYER status 2>/dev/null)
 EXIT_CODE=$?
@@ -38,13 +29,17 @@ if [ "$1" == "--status" ]; then
 else
     if [ "$STATUS" = "Stopped" ]; then
         echo "No music is playing"
+    # A note on hooks:
+    # In the polybar config, they are supposed to be zero-indexed.
+    # When making IPC calls, 1-based index numbers are to be used.
+    # So don't get confused with hook value as 2.
     elif [ "$STATUS" = "Paused"  ]; then
-        update_hooks "$PARENT_BAR_PID" 2
+        polybar-msg -p "$(pgrep -f "polybar $PARENT_BAR")" hook spotify-play-pause 2 1>/dev/null 2>&1
         playerctl --player=$PLAYER metadata --format "$FORMAT"
     elif [ "$STATUS" = "No player is running"  ]; then
-        echo "$STATUS"
+        echo $STATUS
     else
-        update_hooks "$PARENT_BAR_PID" 1
+        polybar-msg -p "$(pgrep -f "polybar $PARENT_BAR")" hook spotify-play-pause 1 1>/dev/null 2>&1
         playerctl --player=$PLAYER metadata --format "$FORMAT"
     fi
 fi

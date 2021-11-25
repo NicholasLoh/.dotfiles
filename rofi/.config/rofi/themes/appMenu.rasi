@@ -48,7 +48,12 @@ element selected {
   text-color: @forground;
 }
 
+element-text selected {
+  background-color: @background-alt;
+}
+
 element-icon {
-  size: 50;
+  size: 20;
   margin: 0 15px 0 0;
+  background-color: @background-alt;
 }

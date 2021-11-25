@@ -1,3 +1,4 @@
-gtk-icon-theme-name = "Moka"
+gtk-icon-theme-name = "Papirus-Dark"
 gtk-theme-name = "Nordic"
 gtk-font-name = "DejaVu Sans Mono Bold"
+gtk-cursor-theme-name="Bibata-Modern-Ice"
