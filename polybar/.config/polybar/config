@@ -2237,6 +2237,9 @@ content = ""
 format-font = 1
 content-padding=1
 content-foreground = #f56977
+click-left = arcolinux-logout
+click-right = arcolinux-logout
+
 
 ################################################################################
 
