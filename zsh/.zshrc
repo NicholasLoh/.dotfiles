@@ -16,6 +16,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export CHROME_EXECUTABLE=/usr/bin/brave
 export PATH=$PATH:/usr/local/flutter/bin
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -261,11 +262,11 @@ alias vbm="sudo /usr/local/bin/arcolinux-vbox-share"
 #shopt -s expand_aliases # expand aliases
 
 #youtube download
-alias yta-aac="yt-dlp --extract-audio --audio-format aac "
-alias yta-best="yt-dlp --extract-audio --audio-format best "
-alias yta-flac="yt-dlp --extract-audio --audio-format flac "
-alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
-alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
+alias yta-aac="yt-dlp -P ~/Music/youtube --extract-audio --audio-format aac "
+alias yta-best="yt-dlp -P ~/Music/youtube --extract-audio --audio-format best "
+alias yta-flac="yt-dlp -P ~/Music/youtube --extract-audio --audio-format flac "
+alias yta-mp3="yt-dlp -P ~/Music/youtube --extract-audio --audio-format mp3 "
+alias ytv-best="yt-dlp -P ~/Videos/youtube -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
 
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
@@ -396,6 +397,9 @@ alias rmgitcache="rm -r ~/.cache/git"
 
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /personal/* ~'
+
+#kitty terminal ssh
+alias ssh="kitty +kitten ssh"
 
 #create a file called .zshrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.

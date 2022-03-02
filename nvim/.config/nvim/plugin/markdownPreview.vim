@@ -1,4 +1,4 @@
-nnoremap <C-m>p :MarkdownPreviewToggle<CR>
+ nnoremap <C-m>p :MarkdownPreviewToggle<CR>
 
 " markdown preview
 " set to 1, nvim will open the preview window after entering the markdown buffer

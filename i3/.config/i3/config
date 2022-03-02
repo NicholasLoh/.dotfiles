@@ -21,6 +21,7 @@ for_window [class="Yad" title="yad-calendar"] floating enable
 for_window [class="feh"] floating enable
 for_window [title="^Android Emulator*"] floating enable
 for_window [title="Bluetooth"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 client.focused          #81A1C1 #285577 #ffffff #FF0000   #D8Dee9
 
@@ -46,17 +47,16 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec --no-startup-id nitrogen --restore &
 exec --no-startup-id ~/.config/polybar/launch.sh &
-exec --no-startup-id kitty 
-exec --no-startup-id spotify 
-exec --no-startup-id brave 
-exec --no-startup-id /usr/share/applications/Ferdi.desktop 
+exec --no-startup-id i3-msg 'workspace 1; exec kitty'
+exec --no-startup-id i3-msg 'workspace 4; exec spotify'
+exec --no-startup-id i3-msg 'workspace 2; exec brave' 
+exec --no-startup-id i3-msg 'workspace 3; exec /home/nicholas/AppImages/Ferdi-5.6.5.AppImage'
 
 # open apps in workspace
 assign [class="Spotify"] 4
 assign [class="Ferdi"] 3
-assign [class="WeChat"] 3
-assign [class="Brave"] 2
-assign [title="^WeChat*"] 3 
+assign [title="^Minecraft*"] 7 
+#assign [title="^WeChat*"] 3 
 
 workspace 1 output HDMI-1
 workspace 2 output HDMI-1

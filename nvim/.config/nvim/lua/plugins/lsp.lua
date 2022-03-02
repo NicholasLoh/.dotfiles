@@ -43,9 +43,10 @@ end
  -- Setup lspconfig.
  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
- nvim_lsp.pylsp.setup{
-   on_attach = on_attach,
+ nvim_lsp.jedi_language_server.setup{
+   on_attach = on_attach
  }
+
 
  nvim_lsp.tsserver.setup {         
    on_attach = on_attach,

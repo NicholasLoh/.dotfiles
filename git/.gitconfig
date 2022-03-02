@@ -1,3 +1,7 @@
 [user]
     email = nicholas.lohlk@gmail.com
-  name = NicholasLoh
+    name = NicholasLoh
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim -es

@@ -26,6 +26,8 @@ Plug 'windwp/nvim-autopairs'
 
 Plug 'windwp/nvim-ts-autotag'
 
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 Plug 'nvim-lua/popup.nvim'
 
 Plug 'nvim-lua/plenary.nvim'

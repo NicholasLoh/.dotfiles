@@ -10,6 +10,12 @@
   border-radius: 5px;
 }
 
+window { 
+  border: 1px;
+  border-color: @border-alt;
+  border-radius: 5px;
+}
+
 inputbar {
   border: 0 0 1px 0;
   children: [prompt,entry];

@@ -4,7 +4,7 @@ BAR_HEIGHT=30  # polybar height
 BORDER_SIZE=3  # border size from your wm2settings
 YAD_WIDTH=250  # 222 is minimum possible value
 YAD_HEIGHT=200 # 193 is minimum possible value
-OFFSET_X="-30"
+OFFSET_X="-31"
 DATE="$(date +"%a %d %H:%M")"
 
 case "$1" in

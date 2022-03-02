@@ -7,7 +7,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   },
   indent = {
-    enable = false,
+    enable = true,
     disable = {},
   },
   ensure_installed = {
@@ -17,7 +17,6 @@ require'nvim-treesitter.configs'.setup {
     "css",
     "dart",
     "dockerfile",
-    "fish",
     "go",
     "graphql",
     "html",
